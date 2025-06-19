@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>feliz cumpleaños ferchita</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="determinacion.png">
+</head>
+<body>
+  <div class="mensaje-superior">
+    Feliz cumpleaños Fer
+  </div>
+
+  <div class="contenedor-video">
+    <div id="iniciar" class="tocar">Haz clic para comenzar</div>
+    <video id="bg-video" muted loop>
+      <source src="video.mp4" type="video/mp4" />
+      Tu navegador no soporta video HTML5.
+    </video>
+  </div>
+
+  <div class="mensaje-inferior">
+    deje cosas ocultas po, buscalas
+  </div>
+
+  <!-- Secretos ocultos con enlaces y mensajes -->
+  <div class="oculto detalle-1">
+    <a href="https://gifft.me/o/l/c0v5s4up8b4s3k1qufo5oggt" target="_blank" style="color: inherit; text-decoration: none;">
+      https://gifft.me/o/l/c0v5s4up8b4s3k1qufo5oggt</a> — pa ti amor
+  </div>
+
+  <div class="oculto detalle-2">
+    <a href="https://gifft.me/o/l/regye15nao906c7ip7z9top9" target="_blank" style="color: inherit; text-decoration: none;">
+      https://gifft.me/o/l/regye15nao906c7ip7z9top9</a> — suertuda qlia
+  </div>
+
+  <div class="oculto detalle-3">
+    <a href="https://youtu.be/VZlx1ppdB9Q?si=gl52sQyu0zzyw0kb" target="_blank" style="color: inherit; text-decoration: none;">
+      https://youtu.be/VZlx1ppdB9Q</a> — valoralo mierda me costo
+  </div>
+
+  <div class="oculto detalle-4">
+    <a href="https://gifft.me/es/o/d/z3stguguut5f4puirhthpe9j" target="_blank" style="color: inherit; text-decoration: none;">
+      https://gifft.me/es/o/d/z3stguguut5f4puirhthpe9j</a><br>
+    — espero que te guste, hay más como estas, están repartidas como el onepiece <br>
+    Pista: busca abajo del video de la página
+  </div>
+
+  <div id="zona-secreta"></div>
+  <div id="url-oculta">
+    https://www.youtube.com/watch?v=HIxsq_41J20<br />
+    Tarde mucho haciendo esto asi que porfavor haz q no sea para nada si?
+  </div>
+
+  <div class="aviso">(El video tiene sonido, haz clic pa iniciar)</div>
+
+  <div style="margin-top: 20px; color: #888; font-size: 13px; text-align: center;">
+    disfruta pe esto lo hice con el sudor de mi frente
+  </div>
+
+  <script>
+    const video = document.getElementById("bg-video");
+    const iniciar = document.getElementById("iniciar");
+    const zonaSecreta = document.getElementById("zona-secreta");
+    const urlOculta = document.getElementById("url-oculta");
+    const ocultos = document.querySelectorAll(".oculto");
+
+    iniciar.addEventListener("click", () => {
+      video.muted = false;
+      video.play().then(() => {
+        iniciar.classList.add("oculto");
+        ocultos.forEach(o => o.style.opacity = 1);
+      }).catch(err => {
+        alert("Error al reproducir el video: " + err);
+      });
+    });
+
+    zonaSecreta.addEventListener("click", () => {
+      urlOculta.style.display = "block";
+    });
+  </script>
+</body>
+</html>
